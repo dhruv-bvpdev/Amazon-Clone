@@ -1,4 +1,5 @@
 import Head from "next/head";
+import Header from "../components/Header";
 
 export default function Home() {
   return (
@@ -7,7 +8,14 @@ export default function Home() {
         <title>Amazon 2.0</title>
       </Head>
 
-      <h1 className="">Hey Guys</h1>
+      {/* Header */}
+      <Header />
+
+      <main className="max-w-screen-2xl mx-auto">
+        {/* Banner */}
+
+        {/* Product Feed */}
+      </main>
     </div>
   );
 }
