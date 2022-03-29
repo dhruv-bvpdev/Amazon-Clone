@@ -1,34 +1,76 @@
-This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+# Amazon Clone
 
-## Getting Started
+Built using Next.js, Redux, TailwindCSS, Firebase
 
-First, run the development server:
+![Home Screen](/screenshots/home.png?raw=true)
+![Orders Screen](/screenshots/orders.png?raw=true)
+![Cart](/screenshots/cart.png?raw=true)
 
-```bash
-npm run dev
-# or
-yarn dev
-```
+### Live Deployment
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+https://amazon-clone-dhruv-gursahani-1.vercel.app/
 
-You can start editing the page by modifying `pages/index.js`. The page auto-updates as you edit the file.
+### Features
 
-[API routes](https://nextjs.org/docs/api-routes/introduction) can be accessed on [http://localhost:3000/api/hello](http://localhost:3000/api/hello). This endpoint can be edited in `pages/api/hello.js`.
+1. Full featured shopping cart
+2. Services carousel
+3. User's order page
+4. Order Storage in Firestore
+5. Stripe payment integration
 
-The `pages/api` directory is mapped to `/api/*`. Files in this directory are treated as [API routes](https://nextjs.org/docs/api-routes/introduction) instead of React pages.
+### Note on Issues
 
-## Learn More
+For any bugs or errors in the project reach out to me on dhruv.gursahani@outlook.com
 
-To learn more about Next.js, take a look at the following resources:
+### Usage
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+#### Install Dependencies
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js/) - your feedback and contributions are welcome!
+- cd Amazon-Clone
+- yarn install
 
-## Deploy on Vercel
+### ENV Variables
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+1. GOOGLE_ID
+2. GOOGLE_SECRET
+3. FIREBASE_API_KEY
+4. FIREBASE_AUTH_DOMAIN
+5. FIREBASE_PROJECT_ID
+6. FIREBASE_STORAGE_BUCKET
+7. FIREBASE_MESSAGING_SENDER_ID
+8. FIREBASE_APP_ID
+9. FIREBASE_SERVICE_ACCOUNT_KEY
+10. NEXTAUTH_URL
+11. NEXTAUTH_SECRET
+12. STRIPE_PUBLIC_KEY
+13. STRIPE_SECRET_KEY
+14. STRIPE_SIGNING_SECRET
+15. HOST
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
+- Variables 1-2 can be found in google cloud console
+
+- Variables 3-8 can be found in firebase console (settings->project settings)
+
+- Variables 10 and 15 are the domain of deployed project
+
+- Variable 11 can be generated using the following command "openssl rand -base64 32"
+
+- Variable 12 - 13 can be found in Stripe developer dashboard
+
+- Variable 14 can be genrated by running "stripe listen --forward-to localhost:3000/api/webhook" in Stripe CLI
+
+### Run
+
+- yarn dev
+
+### License
+
+The MIT License
+
+Copyright (c) 2022 Dhruv Gursahani https://dhruvgursahani.netlify.app
+
+Permission is hereby granted, free of charge, to any person obtaining a copy of this software and associated documentation files (the "Software"), to deal in the Software without restriction, including without limitation the rights to use, copy, modify, merge, publish, distribute, sublicense, and/or sell copies of the Software, and to permit persons to whom the Software is furnished to do so, subject to the following conditions:
+
+The above copyright notice and this permission notice shall be included in all copies or substantial portions of the Software.
+
+THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
